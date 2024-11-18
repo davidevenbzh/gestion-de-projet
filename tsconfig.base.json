@@ -5,8 +5,6 @@
     "module": "commonjs",
     "skipLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "ui-components": ["libs/ui-components/src/index.ts"]
-    }
+    "paths": {}
   }
 }
