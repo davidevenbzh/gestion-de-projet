@@ -1,8 +1,9 @@
 {
   "name": "authentification",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "authentification/src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/auth/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/esbuild:esbuild",
@@ -10,12 +11,12 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/authentification",
+        "outputPath": "dist/backend/auth",
         "format": ["cjs"],
         "bundle": false,
-        "main": "authentification/src/main.ts",
-        "tsConfig": "authentification/tsconfig.app.json",
-        "assets": ["authentification/src/assets"],
+        "main": "backend/auth/src/main.ts",
+        "tsConfig": "backend/auth/tsconfig.app.json",
+        "assets": ["backend/auth/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
@@ -54,6 +55,5 @@
         }
       }
     }
-  },
-  "tags": []
+  }
 }
