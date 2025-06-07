@@ -7,7 +7,7 @@ export class AuthStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    new UserPool(this, 'UserPool', {
+    const userPool = new UserPool(this, 'UserPool', {
       userPoolName: 'user-pool',
       signInCaseSensitive: false,
       userInvitation: {
@@ -35,6 +35,14 @@ export class AuthStack extends cdk.Stack {
         },
       },
       deletionProtection: false,
+    });
+
+    userPool.addClient('AppClient', {
+      userPoolClientName: 'app-client',
+      authFlows: {
+        userPassword: true,
+        userSrp: true,
+      },
     });
   }
 }
