@@ -10,6 +10,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     files: ['**/*.ts', '**/*.tsx'],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/cdk.out/**'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {

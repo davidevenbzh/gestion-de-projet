@@ -1,0 +1,23 @@
+{
+  "name": "@gestion-de-projet/authentication-sdk",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "package": "esbuild src/index.ts --bundle --format=esm --platform=node --outdir=dist --sourcemap --tree-shaking=true --external:tslib"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  }
+}
