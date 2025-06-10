@@ -126,6 +126,9 @@ importers:
 
   backend/auth:
     dependencies:
+      '@gestion-de-projet/authentication-sdk':
+        specifier: workspace:*
+        version: link:../auth-sdk
       aws-cdk-lib:
         specifier: 2.199.0
         version: 2.199.0(constructs@10.4.2)
@@ -163,6 +166,9 @@ importers:
 
   backend/project:
     dependencies:
+      '@gestion-de-projet/authentication-sdk':
+        specifier: workspace:*
+        version: link:../auth-sdk
       aws-cdk-lib:
         specifier: 2.199.0
         version: 2.199.0(constructs@10.4.2)
